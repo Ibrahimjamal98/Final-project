@@ -1,0 +1,45 @@
+.cart {
+  display: flex;
+  padding-top: 10%;
+  font-size: 300%;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  /*font-weight: 400;*/
+  background-image: url(../images/background.png);
+  height: 85vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+.cart h1 {
+  margin-left: 100px;
+}
+.cartDetails {
+  font-size: 24px;
+  padding-left: 10px;
+}
+.MyCartForm {
+  margin-left: 80px;
+  margin-right: 800px;
+  border: 2px solid rgb(112, 161, 176);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.placeOrder-form {
+  width: 30%;
+  border: 4px solid rgb(112, 161, 176);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 5%;
+  margin-left: 150px;
+}
+.placeOrder-form input {
+  font-size: 24px;
+  background-color: transparent;
+}
+.btn-placeorder {
+  margin-left: 40%;
+  background-color: rgb(112, 161, 176);
+}

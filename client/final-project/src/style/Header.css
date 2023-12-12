@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+
+.navbar {
+  background-color: transparent;
+  text-align: right;
+  display: flex;
+  padding: auto;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+nav ul.links {
+  list-style: none;
+  display: flex;
+}
+
+nav ul.links li {
+  margin-right: 20px;
+}
+
+nav ul.links li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  left: 550px;
+  position: relative;
+  margin-top: 10px;
+  justify-content: space-between;
+  top: 15px;
+  font-size: 13px;
+}
+
+nav ul.links li a:hover {
+  color: green;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+
+  top: 5px;
+  display: flex;
+  position: fixed;
+}
+
+.user {
+  width: 30px;
+  justify-content: end;
+  display: flex;
+  position: fixed;
+  top: 10px;
+  left: 1450px;
+}
+
+.Cart {
+  width: 40px;
+  justify-content: end;
+  display: flex;
+  position: fixed;
+  top: 5px;
+  left: 1380px;
+}
+
+.search-navbar {
+  background-color: greenyellow;
+  text-align: center;
+  padding: 10px;
+  top: 20px;
+  position: relative;
+  font-size: 13px;
+  font-family: "Kanit", sans-serif;
+  height: 67px;
+}
+
+.search-navbar label {
+  margin-right: 10px;
+}
+
+.search-bar {
+  border: none;
+  border-radius: 20px;
+  width: 300px;
+  height: 30px;
+  top: 9px;
+  position: relative;
+}
+
+.search-icon {
+  width: 25px;
+  right: 40px;
+  position: relative;
+  top: 8px;
+}

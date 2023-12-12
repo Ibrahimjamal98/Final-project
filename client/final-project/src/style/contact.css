@@ -1,0 +1,25 @@
+.contact {
+  padding-top: 10%;
+  font-size: 300%;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-image: url(../images/background.png);
+  height: 85vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 5%;
+  margin-left: 5%;
+}
