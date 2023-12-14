@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import MyCart from "../components/MyCart";
+import { useCart } from "../context/CartContext";
 
 const Products = () => {
+  const { addToCart } = useCart();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -21,6 +24,11 @@ const Products = () => {
 
     fetchData();
   }, []);
+
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    console.log(`Product added to cart: ${product._id}`);
+  };
 
   if (loading) {
     return <p>Loading...</p>;
@@ -45,8 +53,7 @@ const Products = () => {
           )}
           <p>{product.description}</p>
           <p>Price: {product.productPrice}</p>
-          <p>Created At: {product.createdAt}</p>
-          <p>Updated At: {product.updatedAt}</p>
+          <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
           <hr />
         </div>
       ))}

@@ -1,45 +1,67 @@
+/* Cart Container */
 .cart {
   display: flex;
+  flex-direction: column;
   padding-top: 10%;
   font-size: 300%;
-  color: white;
+  color: black;
   font-style: italic;
   font-weight: bold;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  /*font-weight: 400;*/
-  background-image: url(../images/background.png);
   height: 85vh;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url("path-to-your-background-image.jpg"); /* Update this path */
   background-attachment: fixed;
   background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
+
+/* Cart Header */
 .cart h1 {
   margin-left: 100px;
 }
-.cartDetails {
-  font-size: 24px;
+
+/* Cart Item */
+.cartItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.cartItem img {
+  width: 100px; /* Adjust as needed */
+  height: auto;
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.cartItemDetails {
+  font-size: 1rem; /* Adjust as needed */
   padding-left: 10px;
 }
+
+/* Cart Form */
 .MyCartForm {
-  margin-left: 80px;
-  margin-right: 800px;
+  margin: auto;
+  padding: 20px;
   border: 2px solid rgb(112, 161, 176);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  width: fit-content;
 }
-.placeOrder-form {
-  width: 30%;
-  border: 4px solid rgb(112, 161, 176);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  margin-top: 5%;
-  margin-left: 150px;
-}
-.placeOrder-form input {
-  font-size: 24px;
-  background-color: transparent;
-}
-.btn-placeorder {
-  margin-left: 40%;
+
+/* Buttons */
+.MyCartForm button {
+  font-size: 1rem;
+  padding: 5px 10px;
+  margin-top: 10px;
+  color: white;
   background-color: rgb(112, 161, 176);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.MyCartForm button:hover {
+  background-color: rgb(90, 140, 156);
+}
+
+/* Add other form styles as necessary */

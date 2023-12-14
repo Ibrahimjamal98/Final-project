@@ -9,7 +9,7 @@ connectDb();
 const app = express();
 
 const corsOptions = {
-  origin: "http://localhost:5174", // Replace with your frontend app's URL
+  origin: "http://localhost:5173", // Replace with your frontend app's URL
   credentials: true, // To allow cookies to be sent
 };
 app.use(cors(corsOptions));

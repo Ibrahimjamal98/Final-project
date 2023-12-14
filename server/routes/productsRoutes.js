@@ -3,7 +3,7 @@ const route = express.Router();
 const ProductsController = require("../controllers/productsControllers");
 const { protect, authorize } = require("../middleware/auth");
 
-route.get("/", protect, ProductsController.getAllProducts);
+route.get("/", ProductsController.getAllProducts);
 route.post("/", protect, authorize("admin"), ProductsController.createProduct);
 
 route.put(

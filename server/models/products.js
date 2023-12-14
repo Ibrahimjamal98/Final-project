@@ -20,6 +20,15 @@ const productSchema = mongoose.Schema(
       type: Number,
       required: true,
     },
+
+    productType: {
+      type: String,
+      required: [true, "Please specify the product type!"],
+    },
+
+    productBrand: {
+      type: String,
+    },
   },
 
   {
