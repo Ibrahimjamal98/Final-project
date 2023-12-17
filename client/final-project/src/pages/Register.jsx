@@ -5,6 +5,7 @@ import {
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../style/register.css";
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -78,11 +79,9 @@ const Register = () => {
       });
 
       if (response.ok) {
-        // Successful registration
         setSuccess(true);
         alert("Registration successful!");
       } else {
-        // Handle registration failure
         const data = await response.json();
         setErrMsg(data.message || "Registration failed.");
         alert("Registration failed.");
@@ -106,7 +105,6 @@ const Register = () => {
 
       <h1>Register</h1>
       <form onSubmit={handleSubmit}>
-        {/* name Input */}
         <label htmlFor="name">
           name:
           <FontAwesomeIcon
@@ -144,7 +142,6 @@ const Register = () => {
           Letters, number, underscores, hyphens allowed.
         </p>
 
-        {/* Email Input */}
         <label htmlFor="email">
           Email:
           <FontAwesomeIcon
@@ -178,7 +175,6 @@ const Register = () => {
           Enter a valid email address.
         </p>
 
-        {/* Password Input */}
         <label htmlFor="password">
           Password:
           <FontAwesomeIcon
@@ -216,7 +212,6 @@ const Register = () => {
           one digit, and one special character (!@#$%).
         </p>
 
-        {/* Confirm Password Input */}
         <label htmlFor="confirmPassword">
           Confirm Password:
           <FontAwesomeIcon
@@ -250,7 +245,6 @@ const Register = () => {
           Confirm your password.
         </p>
 
-        {/* Submit button */}
         <button type="submit">Register</button>
       </form>
     </section>

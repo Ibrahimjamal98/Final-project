@@ -19,7 +19,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cookieParser());
 app.use("/products", require("./routes/productsRoutes"));
-app.use("/order", require("./routes/orderRoutes"));
+
 app.use("/auth", require("./routes/authRoute"));
 
 app.listen(port, () => {

@@ -10,6 +10,7 @@ import { CartProvider } from "./context/CartContext";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Products from "./pages/Products";
+import UserDashboard from "./components/UserDashboard";
 
 function App() {
   const Router = createBrowserRouter([
@@ -44,6 +45,10 @@ function App() {
         {
           path: "/login",
           element: <Login />,
+        },
+        {
+          path: "/dashboard",
+          element: <UserDashboard />,
         },
       ],
     },

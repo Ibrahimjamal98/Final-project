@@ -1,42 +1,71 @@
 import React from "react";
-import { TbCurrencyShekel } from "react-icons/tb";
-import { useCart } from "../context/CartContext"; // Adjust the import path as needed
-import "../style/cart.css"; // Adjust the import path as needed
+import { useCart } from "../context/CartContext";
+import "../style/cart.css";
 
 const MyCart = () => {
-  const { cart, removeFromCart } = useCart();
+  const { cart, removeFromCart, updateQuantity } = useCart();
 
-  const handleRemoveFromCart = (e, productId) => {
-    e.preventDefault();
-    removeFromCart(productId);
-    console.log(`Product removed from cart: ${productId}`);
+  const handleIncreaseQuantity = (productId) => {
+    updateQuantity(productId, 1);
+  };
+
+  const handleDecreaseQuantity = (productId) => {
+    updateQuantity(productId, -1);
+  };
+
+  const calculateTotalPrice = (product) => {
+    return product.productPrice * product.quantity;
   };
 
   return (
-    <div className="cart">
-      <div className="forms-container">
-        <form className="MyCartForm">
-          <h1>My Cart</h1>
-          {cart.map((product) => (
-            <div key={product.id} className="cartItem">
-              <img
-                src={product.productImage}
-                alt={product.title}
-                className="cartItemImage"
-              />
-              <div className="cartItemDetails">
-                <h3>{product.title}</h3>
-                <p>
-                  Price: {product.productPrice} <TbCurrencyShekel />
-                </p>
-                <button onClick={(e) => handleRemoveFromCart(e, product.id)}>
-                  Remove
-                </button>
-              </div>
-            </div>
-          ))}
-        </form>
-      </div>
+    <div className="cart-container">
+      {cart.length === 0 ? (
+        <p className="Cart-text">Your cart is empty.</p>
+      ) : (
+        <table className="cart-table">
+          <tbody>
+            {cart.map((product) => (
+              <tr key={product._id} className="cart-item">
+                <td>
+                  {product.productImage && (
+                    <img
+                      src={product.productImage}
+                      alt={product.title}
+                      style={{ width: "50%", height: "auto" }}
+                    />
+                  )}
+                </td>
+                <td>{product.title}</td>
+                <td>${product.productPrice}</td>
+                <td>
+                  <button
+                    className="quantity-decrease"
+                    onClick={() => handleDecreaseQuantity(product._id)}
+                  >
+                    -
+                  </button>
+                  {product.quantity}
+                  <button
+                    className="quantity-increase"
+                    onClick={() => handleIncreaseQuantity(product._id)}
+                  >
+                    +
+                  </button>
+                </td>
+                <td>${calculateTotalPrice(product)}</td>
+                <td>
+                  <button
+                    className="remove-button"
+                    onClick={() => removeFromCart(product._id)}
+                  >
+                    Remove
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 };

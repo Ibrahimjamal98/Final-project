@@ -1,67 +1,80 @@
-/* Cart Container */
-.cart {
-  display: flex;
-  flex-direction: column;
-  padding-top: 10%;
-  font-size: 300%;
-  color: black;
-  font-style: italic;
-  font-weight: bold;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  height: 85vh;
-  background-image: url("path-to-your-background-image.jpg"); /* Update this path */
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
+/* Cart.css */
 
-/* Cart Header */
-.cart h1 {
-  margin-left: 100px;
-}
-
-/* Cart Item */
-.cartItem {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px; /* Adjust as needed */
-}
-
-.cartItem img {
-  width: 100px; /* Adjust as needed */
-  height: auto;
-  margin-right: 20px; /* Adjust as needed */
-}
-
-.cartItemDetails {
-  font-size: 1rem; /* Adjust as needed */
-  padding-left: 10px;
-}
-
-/* Cart Form */
-.MyCartForm {
-  margin: auto;
+.cart-container {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
-  border: 2px solid rgb(112, 161, 176);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  width: fit-content;
+  margin-top: 5%;
+  margin-right: 850px;
+  position: relative;
 }
 
-/* Buttons */
-.MyCartForm button {
-  font-size: 1rem;
-  padding: 5px 10px;
-  margin-top: 10px;
-  color: white;
-  background-color: rgb(112, 161, 176);
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 150px;
+}
+
+.cart-item {
+  border: 1px solid #ddd;
+  display: flex;
+}
+
+.cart-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cart-item td {
+  padding: 15px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  width: 220px;
+  right: 1px;
+  position: relative;
+}
+
+.cart-item h2 {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.cart-item p {
+  margin: 0;
+  margin-right: 10%;
+}
+
+.remove-button {
+  background-color: #ff4d4d;
+  color: #fff;
   border: none;
+  padding: 8px 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.MyCartForm button:hover {
-  background-color: rgb(90, 140, 156);
+.remove-button:hover {
+  background-color: #e60000;
 }
 
-/* Add other form styles as necessary */
+.Cart-text {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 20px;
+  color: #00ff00;
+  font-size: 1.9rem;
+  margin-left: 70%;
+}
+
+.quantity-decrease {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.quantity-increase {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin-right: 10px;
+}

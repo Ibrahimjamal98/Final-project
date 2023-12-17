@@ -1,0 +1,13 @@
+/* userDashboard.css */
+.Welcome {
+  list-style-type: none; /* Remove bullet points */
+}
+
+.Welcome a {
+  text-decoration: none; /* Remove text decoration for the link */
+  color: black; /* Change link color to your preference */
+}
+
+.Welcome a:hover {
+  text-decoration: underline; /* Add underline on hover if desired */
+}
